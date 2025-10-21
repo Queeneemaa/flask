@@ -63,7 +63,7 @@ def hello_generator_expression() -> t.Iterator[bytes]:
 
 @app.route("/iterator")
 def hello_iterator() -> t.Iterator[str]:
-    return iter([f"data:{x}\n\n" for x in range(100)])
+    return iter(f"data:{x}\n\n" for x in range(100))
 
 
 @app.route("/status")
